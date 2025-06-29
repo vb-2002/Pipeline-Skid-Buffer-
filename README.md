@@ -61,9 +61,21 @@ A testbench is included (`pipe_skid_buffer_tb.sv`) to simulate:
 
 ### ✅ How to Run
 
-Using any SystemVerilog simulator (like [Icarus Verilog](http://iverilog.icarus.com):
+Using any SystemVerilog simulator (like [Icarus Verilog],VCS etc.:
 
 ```bash
 # Example using VCS
 vcs pipe_skid_buffer.sv pipe_skid_buffer_tb.sv -full64 -sverilog -debug_access+all
 ./simv
+```
+Sample Output
+
+[45000] Received data: 0
+[65000] Received data: 1
+[85000] Received data: 2
+[125000] Received data: 99
+[145000] Received data: 4
+[165000] Received data: 5
+[185000] Received data: 6
+Test complete: sent=7 received=7
+testbench.sv:95: $finish called at 275000 (1ps)
