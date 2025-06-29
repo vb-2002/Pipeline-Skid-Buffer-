@@ -1,4 +1,4 @@
-# pipe_skid_buffer
+# pipeline_skid_buffer
 
 A SystemVerilog implementation of a simple 2-stage pipelined **skid buffer** with ready/valid handshake support. This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
 
@@ -69,7 +69,7 @@ vcs pipe_skid_buffer.sv pipe_skid_buffer_tb.sv -full64 -sverilog -debug_access+a
 ./simv
 
 ```
-Sample Output
+### 🔍 Sample Output
 ```bash
 [45000] Received data: 0
 [65000] Received data: 1
