@@ -1,9 +1,12 @@
+# Background 
+A **skid buffer** is a a specialized pipeline element used in ready/valid handshake-based pipelined data paths to handle backpressure while maintaining high throughput and avoiding data loss. It registers the ready signal instead of allowing it to propagate combinatorially, thereby easing timing pressure on the ready path.
 # pipeline_skid_buffer
-Implementation of a simple pipelined **skid buffer** with ready/valid handshake support. This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
+Pipeline Skid Buffer functions similar to Skid Buffer, but it provides complete decoupling / demarcation from Receiver by breaking ready as well as data and valid combinatorial paths, by registering both. It makes the interface fully pipelined with better timing performance.
 
----
+-----------------
 
 ## 📦 Module: `pipe_skid_buffer`
+This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
 
 ### 🔧 Parameters
 - `DWIDTH`: Data width (default: 8 bits)
