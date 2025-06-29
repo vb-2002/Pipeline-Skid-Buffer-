@@ -1,6 +1,6 @@
 # pipe_skid_buffer
 
-A SystemVerilog implementation of a simple 2-stage pipelined skid buffer with ready/valid handshake support. This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
+A SystemVerilog implementation of a simple 2-stage pipelined **skid buffer** with ready/valid handshake support. This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
 
 ---
 
@@ -67,9 +67,10 @@ Using any SystemVerilog simulator (like [Icarus Verilog],VCS etc.:
 # Example using VCS
 vcs pipe_skid_buffer.sv pipe_skid_buffer_tb.sv -full64 -sverilog -debug_access+all
 ./simv
+
 ```
 Sample Output
-
+```bash
 [45000] Received data: 0
 [65000] Received data: 1
 [85000] Received data: 2
@@ -79,3 +80,4 @@ Sample Output
 [185000] Received data: 6
 Test complete: sent=7 received=7
 testbench.sv:95: $finish called at 275000 (1ps)
+```
