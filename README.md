@@ -83,3 +83,7 @@ vcs pipe_skid_buffer.sv pipe_skid_buffer_tb.sv -full64 -sverilog -debug_access+a
 Test complete: sent=7 received=7
 testbench.sv:95: $finish called at 275000 (1ps)
 ```
+## 📚 References & Inspiration
+- https://chipmunklogic.com/digital-logic-design/designing-skid-buffers-for-pipelines/
+- https://fpgacpu.ca/fpga/Pipeline_Skid_Buffer.html
+- https://zipcpu.com/blog/2019/05/22/skidbuffer.html
