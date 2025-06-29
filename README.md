@@ -67,7 +67,7 @@ Using any SystemVerilog simulator (like [Icarus Verilog],VCS etc.:
 
 ```bash
 # Example using VCS
-vcs pipe_skid_buffer.sv pipe_skid_buffer_tb.sv -full64 -sverilog -debug_access+all
+vcs pipe_skid_buffer.sv tb.sv -full64 -sverilog -debug_access+all
 ./simv
 
 ```
