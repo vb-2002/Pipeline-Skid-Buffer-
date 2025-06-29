@@ -1,7 +1,7 @@
 # Background 
 A **skid buffer** is a a specialized pipeline element used in ready/valid handshake-based pipelined data paths to handle backpressure while maintaining high throughput and avoiding data loss. It registers the ready signal instead of allowing it to propagate combinatorially, thereby easing timing pressure on the ready path.
 # pipeline_skid_buffer
-Pipeline Skid Buffer functions similar to Skid Buffer, but it provides complete decoupling / demarcation from Receiver by breaking ready as well as data and valid combinatorial paths, by registering both. It makes the interface fully pipelined with better timing performance.
+Pipeline Skid Buffer functions similar to Skid Buffer, but it provides complete decoupling from Receiver by breaking ready as well as data and valid combinatorial paths, by registering both. It makes the interface fully pipelined with better timing performance.
 
 -----------------
 
