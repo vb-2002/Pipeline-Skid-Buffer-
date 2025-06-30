@@ -1,5 +1,4 @@
-module pipe_skid_buffer #(   
-   // Global Parameters   
+module pipe_skid_buffer #(
    parameter DWIDTH    =  8                                // Data width                                                          
 ) 
 (
