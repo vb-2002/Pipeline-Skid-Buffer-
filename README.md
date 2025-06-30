@@ -55,7 +55,7 @@ When `i_valid=1`, `i_ready=0`, and valid data is already held in `data_rg1`, the
 
 ## 🧪 Testbench
 
-A testbench is included (`pipe_skid_buffer_tb.sv`) to simulate:
+A testbench is included (`tb.sv`) to simulate:
 
 - Normal transmission
 - Backpressure handling
