@@ -63,7 +63,7 @@ A testbench is included (`tb.sv`) to simulate:
 
 ### ✅ How to Run
 
-Using any SystemVerilog simulator (like [Icarus Verilog],VCS etc.:
+Using any SystemVerilog simulator (like Icarus Verilog, VCS etc.:
 
 ```bash
 # Example using VCS
