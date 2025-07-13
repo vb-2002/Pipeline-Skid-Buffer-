@@ -5,13 +5,13 @@ Pipeline Skid Buffer functions similar to Skid Buffer, but it provides complete 
 
 -----------------
 
-## 📦 Module: `pipe_skid_buffer`
+##  Module: `pipe_skid_buffer`
 This module ensures robust data transfer between upstream and downstream components, even when backpressure (i.e., `i_ready` going low) occurs mid-transaction.
 
-### 🔧 Parameters
+### Parameters
 - `DWIDTH`: Data width (default: 8 bits)
 
-### 🔌 Ports
+### Ports
 
 #### Clock and Reset
 | Signal | Direction | Description               |
@@ -35,7 +35,7 @@ This module ensures robust data transfer between upstream and downstream compone
 
 ---
 
-## ⚙️ Behavior
+##  Behavior
 
 This skid buffer handles pipeline stalls caused by downstream backpressure. Internally, it uses:
 
@@ -43,7 +43,7 @@ This skid buffer handles pipeline stalls caused by downstream backpressure. Inte
 - **data_rg2**: Temporarily stores old data when a stall occurs
 - **2 states**: `PIPE` and `SKID`
 
-### ⏬ Backpressure Scenario
+### Backpressure Scenario
 
 When `i_valid=1`, `i_ready=0`, and valid data is already held in `data_rg1`, the module:
 
@@ -61,17 +61,7 @@ A testbench is included (`tb.sv`) to simulate:
 - Backpressure handling
 - Recovery from SKID state
 
-### ✅ How to Run
-
-Using any SystemVerilog simulator (like Icarus Verilog, VCS etc.:
-
-```bash
-# Example using VCS
-vcs pipe_skid_buffer.sv tb.sv -full64 -sverilog -debug_access+all
-./simv
-
-```
-### 🔍 Sample Output
+### Sample Output
 ```bash
 [45000] Received data: 0
 [65000] Received data: 1
